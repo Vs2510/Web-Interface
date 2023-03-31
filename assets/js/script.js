@@ -33,14 +33,14 @@ function toggleDiv() {
 }
 
 const firebaseConfig = {
-    apiKey: "AIzaSyClt17TmkLCf1wit1aV4uezjeFtHDYdUlw",
-    authDomain: "smart-fishfeeder.firebaseapp.com",
-    databaseURL: "https://smart-fishfeeder-default-rtdb.firebaseio.com",
-    projectId: "smart-fishfeeder",
-    storageBucket: "smart-fishfeeder.appspot.com",
-    messagingSenderId: "244514055887",
-    appId: "1:244514055887:web:4d6ce2be5d6d8a68c739ba",
-    measurementId: "G-RVXXT9QSY4"
+    apiKey: "AIzaSyACI5JRdRim6_jBSA6A3OIbMhNrbBNZsns",
+    authDomain: "xplore23-1256a.firebaseapp.com",
+    databaseURL: "https://xplore23-1256a-default-rtdb.firebaseio.com",
+    projectId: "xplore23-1256a",
+    storageBucket: "xplore23-1256a.appspot.com",
+    messagingSenderId: "426292622812",
+    appId: "1:426292622812:web:b28257fe960fab90628b19",
+    measurementId: "G-KD6C9R0EC6"
   };
 firebase.initializeApp(firebaseConfig);
 
