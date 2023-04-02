@@ -32,17 +32,26 @@ function toggleDiv() {
     $('.components2').toggle();
 }
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyACI5JRdRim6_jBSA6A3OIbMhNrbBNZsns",
-    authDomain: "xplore23-1256a.firebaseapp.com",
-    databaseURL: "https://xplore23-1256a-default-rtdb.firebaseio.com",
-    projectId: "xplore23-1256a",
-    storageBucket: "xplore23-1256a.appspot.com",
-    messagingSenderId: "426292622812",
-    appId: "1:426292622812:web:b28257fe960fab90628b19",
-    measurementId: "G-KD6C9R0EC6"
+    apiKey: "AIzaSyDXaidoV0dBGi_jj1W_w0Po3kR_VywjXG8",
+    authDomain: "feeders-3dab3.firebaseapp.com",
+    databaseURL: "https://feeders-3dab3-default-rtdb.firebaseio.com",
+    projectId: "feeders-3dab3",
+    storageBucket: "feeders-3dab3.appspot.com",
+    messagingSenderId: "1040475821820",
+    appId: "1:1040475821820:web:36ec3d3792144b215f2979",
+    measurementId: "G-8G7ZL41GXS"
   };
 firebase.initializeApp(firebaseConfig);
+firebase.database().ref('/direct').on('value', (snapshot) => {
+    const direct = snapshot.val();
+    
+    // Display the fish feed count on the website
+    document.getElementById('direct').textContent = direct;
+    const p = document.getElementById('message');
+    console.log(p);
+  });
 
 var countRef = firebase.database().ref('count');
 countRef.on('value', function(snapshot) {
@@ -55,6 +64,7 @@ function feednow() {
         feednow: 1
     });
 }
+
 
 $(document).ready(function() {
     $('#timepicker').mdtimepicker(); //Initializes the time picker
